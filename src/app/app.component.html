@@ -1,0 +1,37 @@
+<div *ngIf="!isCustumerLoggedIn && !isAdminLoggedIn">
+  <mat-toolbar color="primary" class="navbar">
+    <span class="navbar brard">E-Commerce</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/sing-up" routerLinkActive="active">Registrarse</button>
+    <button mat-button routerLink="/login" routerLinkActive="active">Iniciar Sesión</button>
+  </mat-toolbar>
+</div>
+
+<div *ngIf="isAdminLoggedIn">
+  <mat-toolbar color="primary" class="navbar">
+    <span class="navbar brard">E-Commerce</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
+    <button mat-button routerLink="/admin/analytics" routerLinkActive="active">Analitica</button>
+    <button mat-button routerLink="/admin/category" routerLinkActive="active">Categoria</button>
+    <button mat-button routerLink="/admin/product" routerLinkActive="active">Productos</button>
+    <button mat-button routerLink="/admin/orders" routerLinkActive="active">Pedidos</button>
+    <button mat-button routerLink="/admin/post-coupon" routerLinkActive="active">Crear Cupon</button>
+    <button mat-button routerLink="/admin/coupons" routerLinkActive="active">Cupones</button>
+    <button mat-button routerLinkActive="active" (click)="logout()">Salir</button>
+  </mat-toolbar>
+</div>
+
+<div *ngIf="isCustumerLoggedIn">
+  <mat-toolbar color="primary" class="navbar">
+    <span class="navbar brard">E-Commerce</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/customer/dashboard" routerLinkActive="active">Dashboard</button>
+    <button mat-button routerLink="/customer/cart" routerLinkActive="active">Compras</button>
+    <button mat-button routerLink="/customer/my-orders" routerLinkActive="active">Mis Pedidos</button>
+    <button mat-button routerLink="/customer/wishlist" routerLinkActive="active">Mis Favoritos</button>
+    <button mat-button routerLinkActive="active" (click)="logout()">Salir</button>
+  </mat-toolbar>
+</div>
+
+<router-outlet></router-outlet>
