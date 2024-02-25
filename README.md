@@ -13,8 +13,8 @@ Autenticacion con JWT.
 
 ## Forma de Uso
 
-Para utilizar este codigo, debe clonar el repositorio o descargarlo. Luego usar el comando npm install para descargar las dependecias.
-Para ejecutar el proyecto ejecute el coamndo ng serve.
+Para utilizar este codigo, debe clonar el repositorio o descargarlo. Luego usar el comando <b> npm install </b> para descargar las dependecias.
+Para ejecutar el proyecto ejecute el coamndo <b> ng serve </b>.
 Para realizar pruebas en su entorno local el usuario que se crea por default es admin@gmail.com y la contraseña admin.
 Login http://localhost:4200/login
 
